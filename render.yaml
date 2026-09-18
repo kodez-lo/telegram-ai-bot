@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: kodez-videos-downloader
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: kodez-render-free-v4-clean
+    dockerfilePath: ./Dockerfile
+    autoDeployTrigger: off
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATA_DIR
+        value: /tmp/kodez-data
